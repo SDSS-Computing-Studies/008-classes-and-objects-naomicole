@@ -27,12 +27,9 @@ class student:
     name = ""
     studentNumber = ""
     grade = 0
+    courses = []
+    grades = []
 
-    def getCourses(list):
-        print( getCourses(list))
-    
-    def getGrades(list):
-        print( getGrades(list))
 
     # properties should be listed first
 
@@ -42,6 +39,12 @@ class student:
         self.studentNumber = studentNumber
         self.grade = grade
         print("Hello " + self.name)
+ 
+    def getCourses(gc):
+        print( getCourses(gc))
+    
+    def getGrades(gg):
+        print( getGrades(gg))
 
     def __del__():
         pass
@@ -55,11 +58,11 @@ def main():
 
     st1 = student("Anita Bath","91334",11)
     st1.getCourses( ["English","Math","PE","Computers","History","Biology","Japanese"] )
-    st1.getGrades( 91, 94, 87, 99, 82, 100, 73)
+    st1.getGrades( [91, 94, 87, 99, 82, 100, 73])
 
     st2 = student("Joe Lunchbox","12346", 11)
-    st1.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
-    st1.getGrades( 71, 98, 93, 95, 68, 81, 71)
+    st2.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
+    st2.getGrades( [71, 98, 93, 95, 68, 81, 71])
 
 
 
