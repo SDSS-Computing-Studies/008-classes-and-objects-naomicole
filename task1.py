@@ -30,27 +30,64 @@ class student:
     courses = []
     grades = []
 
-
     # properties should be listed first
 
     def __init__(self, name, studentNumber, grade): # You will need to create your own input parameters for all methods
-        pass
+        
         self.name = name 
         self.studentNumber = studentNumber
         self.grade = grade
         print("Hello " + self.name)
  
-    def getCourses(gc):
-        print( getCourses(gc))
-    
-    def getGrades(gg):
-        print( getGrades(gg))
+    def getCourses(self, gc):
+        
+        self.courses = gc
+        
+    def getGrades(self, gg):
+        
+        self.grades = gg
 
-    def __del__():
+    def commands(self):
+        
+        print("--------------------------------------")
+        print("What would you like to do?")
+        print("")
+        print("1.See all your courses")
+        print("2.See what grade you have in a course")
+        print("3.Get your average")
+        print("4.Find out if you're on Honor Roll")
+        print("5.Exit")
+        command = input("Choose a number[1-5]: ")
+        print("--------------------------------------")
+        return int(command)
+      
+    def StuCommands(self, command):
+        
+        if command == 1:
+            self.showCourses()
+        elif command == 2:
+            self.showGrade()
+        elif command == 3:
+            self.average()
+        elif command == 4:
+            self.getHonorRoll()
+
+    def showCourses(self):
+        
+        print(self.courses)
+
+    def showGrade(self):
         pass
 
-    def average(self):
+    def average(self): 
         pass
+
+    def getHonorRoll(self):
+        pass
+
+    def __del__(self):
+        pass
+        print("Thank you " + self.name + ", see you soon\n")
 
 def main():
     # This contains test data that will be used by the autograder.
@@ -60,9 +97,27 @@ def main():
     st1.getCourses( ["English","Math","PE","Computers","History","Biology","Japanese"] )
     st1.getGrades( [91, 94, 87, 99, 82, 100, 73])
 
+    command = 0 
+
+    while True:
+        command = st1.commands()
+        if command == 5:
+            del st1
+            break
+        st1.StuCommands(command)
+        print("\n")
+
     st2 = student("Joe Lunchbox","12346", 11)
     st2.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
     st2.getGrades( [71, 98, 93, 95, 68, 81, 71])
+
+    while True:
+        command == st2.commands()
+        if command == 5:
+            del st2
+            break
+        st2.StuCommands(command)
+        print("\n")
 
 
 
