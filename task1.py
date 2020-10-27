@@ -47,37 +47,16 @@ class student:
         
         self.grades = gg
 
-    def commands(self):
-        
-        print("--------------------------------------")
-        print("What would you like to do?")
-        print("")
-        print("1.See all your courses")
-        print("2.See what grade you have in a course")
-        print("3.Get your average")
-        print("4.Find out if you're on Honor Roll")
-        print("5.Exit")
-        command = input("Choose a number[1-5]: ")
-        print("--------------------------------------")
-        return int(command)
-      
-    def StuCommands(self, command):
-        
-        if command == 1:
-            self.showCourses()
-        elif command == 2:
-            self.showGrade()
-        elif command == 3:
-            self.average()
-        elif command == 4:
-            self.getHonorRoll()
-
     def showCourses(self):
         
         print(self.courses)
 
-    def showGrade(self):
-        pass
+    def showGrade(self, index):
+        
+        lis1 = self.courses
+        lis2 = self.grades
+        
+        print("You have " + lis2[index] + "in " + lis1[index])
 
     def average(self): 
         pass
@@ -97,29 +76,14 @@ def main():
     st1.getCourses( ["English","Math","PE","Computers","History","Biology","Japanese"] )
     st1.getGrades( [91, 94, 87, 99, 82, 100, 73])
 
-    command = 0 
+    
 
-    while True:
-        command = st1.commands()
-        if command == 5:
-            del st1
-            break
-        st1.StuCommands(command)
-        print("\n")
-
+   
     st2 = student("Joe Lunchbox","12346", 11)
     st2.getCourses( ["English","Math","Physics","Computers","Geography","Chemistry","French"] )
     st2.getGrades( [71, 98, 93, 95, 68, 81, 71])
 
-    while True:
-        command == st2.commands()
-        if command == 5:
-            del st2
-            break
-        st2.StuCommands(command)
-        print("\n")
-
-
+    
 
 
 main()
