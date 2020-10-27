@@ -43,20 +43,29 @@ class student:
         
         self.courses = gc
         
-    def getGrades(self, gg):
-        
-        self.grades = gg
+    def getGrades(self, grade1=0, grade2=0, grade3=0, grade4=0, grade5=0, grade6=0, grade7=0):
+        lisgrade = []
+        lisgrade.insert(0,grade1)
+        lisgrade.insert(1,grade2)
+        lisgrade.insert(1,grade3)
+        lisgrade.insert(1,grade4)
+        lisgrade.insert(1,grade5)
+        lisgrade.insert(1,grade6)
+        lisgrade.insert(1,grade7)
+        self.grades = lisgrade
 
     def showCourses(self):
         
-        print(self.courses)
+       liscourses = print(self.courses)
+       return liscourses
 
     def showGrade(self, index):
         
         lis1 = self.courses
         lis2 = self.grades
         
-        print("You have " + lis2[index] + "in " + lis1[index])
+        x = print("You have " + lis2[index] + "in " + lis1[index])
+        return x
 
     def average(self): 
         pass
