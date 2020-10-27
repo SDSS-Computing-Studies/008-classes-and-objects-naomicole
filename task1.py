@@ -68,13 +68,36 @@ class student:
         return x
 
     def average(self): 
-        pass
+        
+        length = len(self.grades)
+        a = sum(self.grades)
+        average = a/length 
+        return average
+        
 
     def getHonorRoll(self):
-        pass
+        
+        lisgrades = self.grades
+        lisgrades.sort()
+        lisgrades.reverse()
+        length = len(lisgrades)
+        if length >= 5: 
+            g1 = lisgrades[0]
+            g2 = lisgrades[1]
+            g3 = lisgrades[2]
+            g4 = lisgrades[3]
+            g5 = lisgrades[4]
+            hr = (g1 + g2 + g3 + g4 + g5)/5
+            if hr >= 86:
+                return True
+            else:
+                return False
+        else:
+            x = print(self.name + " is not taking enough courses")
+        return x
 
     def __del__(self):
-        pass
+        
         print("Thank you " + self.name + ", see you soon\n")
 
 def main():
