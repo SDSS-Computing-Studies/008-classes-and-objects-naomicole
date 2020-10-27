@@ -43,16 +43,9 @@ class student:
         
         self.courses = gc
         
-    def getGrades(self, grade1=0, grade2=0, grade3=0, grade4=0, grade5=0, grade6=0, grade7=0):
-        lisgrade = []
-        lisgrade.insert(0,grade1)
-        lisgrade.insert(1,grade2)
-        lisgrade.insert(1,grade3)
-        lisgrade.insert(1,grade4)
-        lisgrade.insert(1,grade5)
-        lisgrade.insert(1,grade6)
-        lisgrade.insert(1,grade7)
-        self.grades = lisgrade
+    def getGrades(self, grade1):
+        self.grades = grade1
+        
 
     def showCourses(self):
         
