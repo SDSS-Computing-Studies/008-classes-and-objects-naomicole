@@ -44,6 +44,7 @@ class student:
         self.courses = gc
         
     def getGrades(self, grade1):
+        
         self.grades = grade1
         
 
